@@ -71,7 +71,7 @@ const DeployFeed = () => {
             <Spinner />
           </div>
         ) : (
-          dataArray.map((el, i) => (
+          dataArray && dataArray.map((el, i) => (
             <div className={`${styles.wrapper}  `} key={i}>
               <p className={styles.nameAndSymbol}>
                 <span className={styles.name}> {el.tokenName}</span>{" "}
