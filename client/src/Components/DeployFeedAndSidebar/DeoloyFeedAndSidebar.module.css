@@ -1,0 +1,63 @@
+.mainWrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 120px;
+}
+.logoAndSearch {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.logoContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 15px;
+}
+.logo {
+  margin-top: 8px;
+}
+
+.logoText {
+  font-family: "Segoe UI";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 70px;
+
+  color: #c1c6de;
+
+  color: #fff;
+}
+.ape {
+  font-weight: 700;
+}
+.inputContainer {
+  width: 400px;
+
+  background-color: #27293d;
+  border: 1px solid #8c3bff;
+  border-radius: 22px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3px 0;
+  padding-right: 15px;
+  margin-left: 15px;
+}
+.input {
+  border: none;
+  outline: none;
+  padding: 8px 15px;
+  color: #c1c6de;
+  background: none;
+  width: 100%;
+  font-size: 20px;
+}
+.deployFeedAndSidebar {
+  display: flex;
+  align-items: flex-start;
+  padding: 0 30px;
+  padding-top: 45px;
+}

@@ -1,0 +1,125 @@
+.deployFeed {
+  width: 100%;
+}
+.title {
+  font-family: "Segoe UI";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 46.793px;
+  line-height: 100%;
+  color: #c1c6de;
+  padding-bottom: 20px;
+}
+
+.mainWrapper {
+  border: 1px solid #c1c6de;
+  border-radius: 15px;
+  width: 100%;
+}
+.wrapper {
+  display: grid;
+  grid-template-columns: 0.2fr 0.1fr 0.1fr 0.1fr 0.1fr 0.1fr 0.1fr 0.1fr 0.1fr;
+  padding: 15px 15px;
+}
+.titleContainer {
+  border-bottom: 1px solid #c1c6de;
+  padding: 15px 15px;
+}
+
+.heading {
+  font-family: "Arial";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14.748px;
+  line-height: 120%;
+  text-align: center;
+  color: #ffffff;
+}
+.name {
+  font-family: "Segoe UI";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14.748px;
+  line-height: 20px;
+  text-align: left;
+  color: #ffffff;
+  opacity: 0.8;
+  text-align: center;
+}
+.nameAndSymbol {
+  font-family: "Segoe UI";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14.748px;
+  line-height: 20px;
+  text-align: left;
+  color: #ffffff;
+  opacity: 0.8;
+}
+
+.sucess {
+  color: #74d94e;
+  opacity: 1;
+}
+.status {
+  color: #fff;
+  line-height: 17px;
+}
+.iconWrapper {
+  display: flex;
+  justify-content: center;
+}
+.deployer {
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+}
+.addressContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.socialContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.8);
+}
+.icon {
+  width: 18px;
+}
+.copy {
+  margin-left: 5px;
+  width: 16px;
+}
+.warning {
+  color: #ff7c9f;
+}
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 15px;
+  border: none;
+  background: #8c3bff;
+  cursor: pointer;
+  outline: none;
+  color: white;
+  font-weight: bold;
+}
+@media only screen and (max-width: 1399px) {
+  .name {
+    font-size: 13px;
+  }
+  .icon {
+    width: 16px;
+  }
+  .copy {
+    width: 13px;
+  }
+} ;
