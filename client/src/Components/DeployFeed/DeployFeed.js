@@ -23,7 +23,7 @@ const DeployFeed = () => {
     try {
       setLoading(true);
       const response = await axios.get(
-        "https://app-scanner.herokuapp.com//api/hashes?page=" + page
+        "https://app-scanner.herokuapp.com/api/hashes?page=" + page
       );
       setDataArray(response.data.data);
       setLength(response.data.length);
