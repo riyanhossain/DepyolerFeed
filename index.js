@@ -1,9 +1,10 @@
 const mongoose = require("mongoose");
-const HashStore = require("./models/hashstore");
+const hashesHandler = require("./routes/hashes");
 const express = require("express");
 const cors = require("cors");
 const app = express();
 const port = process.env.PORT || 5000;
+
 
 //connect to the database
 mongoose.connect(
@@ -14,25 +15,7 @@ app.use(cors());
 
 //find all hashes in the database
 
-app.get("/api/hashes", async (req, res) => {
-  const page = parseInt(req.query.page) || 1;
-  try {
-    allHashes = await HashStore.find();
-    const hashes = await HashStore.find()
-      .limit(10)
-      .skip(10 * (page - 1));
-    res.status(200).json({
-      message: "hashes retrieved successfully",
-      data: hashes,
-      length: allHashes.length,
-    });
-  } catch (err) {
-    res.status(500).json({
-      message: "error retrieving hashes",
-      data: err,
-    });
-  }
-});
+app.use("/api/v1", hashesHandler );
 
 // --------------------------deployment------------------------------
 

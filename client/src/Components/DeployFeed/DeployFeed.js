@@ -17,16 +17,16 @@ const DeployFeed = () => {
     "C/A Age",
   ];
   const [page, setPage] = React.useState(1);
-  const [length, setLength] = React.useState(0);
+  const [length, setLength] = React.useState({});
   const [loading, setLoading] = React.useState(false);
   const fetchDeployFeed = async (page) => {
     try {
       setLoading(true);
       const response = await axios.get(
-        "https://app-scanner.herokuapp.com/api/hashes?page=" + page
+        "http://localhost:5000/api/v1/hashes?page=" + page
       );
       setDataArray(response.data.data);
-      setLength(response.data.length);
+      setLength(response.data);
       setLoading(false);
     } catch (err) {
       console.log(err);
@@ -37,7 +37,7 @@ const DeployFeed = () => {
   }, [page]);
   const pagearr = () => {
     let arr = [];
-    for (let i = 1; i <= Math.ceil(length / 10); i++) {
+    for (let i = 1; i <= length.totalPages ; i++) {
       arr.push(i);
     }
     return arr;
@@ -194,13 +194,13 @@ const DeployFeed = () => {
 
         <button
           className={styles.button}
-          disabled={page === Math.ceil(length / 10)}
+          disabled={page === length.totalPages}
           style={{
-            cursor: page === Math.ceil(length / 10) && "not-allowed",
-            backgroundColor: page === Math.ceil(length / 10) ? "#00A8E8" : null,
+            cursor: page === length.totalPages && "not-allowed",
+            backgroundColor: page === length.totalPages ? "#00A8E8" : null,
           }}
           onClick={() => {
-            if (page <= Math.floor(length / 10)) {
+            if (page <= length.totalPages) {
               setPage(page + 1);
             }
           }}
